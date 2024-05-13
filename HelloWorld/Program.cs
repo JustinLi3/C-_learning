@@ -1,4 +1,5 @@
 ﻿using System; //basic utility classes and primitive types
+using System.Collections.Concurrent;
 using System.Collections.Generic; //lists, collections, etc
 using System.Linq;//data
 using System.Text;//text, coding
@@ -26,11 +27,23 @@ namespace HelloWorld //namespace is similar to package in Java
       Console.WriteLine(character);
       Console.WriteLine(firstName);
       Console.WriteLine(isWorking);
+      Console.WriteLine("{0} {1}", byte.MinValue, byte.MaxValue); //0 and 1 represent arguments that take in values 
+      Console.Write("{0} {1}", float.MinValue, float.MaxValue);
+
+      //Type Conversion 
+      //Use Convert or .Parse   
+
+      try {
+        string str = "true";
+        bool b = Convert.ToBoolean(str);
+        Console.WriteLine(b);
+      }
+      catch (Exception)
+      {
+        Console.WriteLine("The number cannot be converted to a byte");
+      }
 
 
-
-
-
-    }
+      }
   }
 }
