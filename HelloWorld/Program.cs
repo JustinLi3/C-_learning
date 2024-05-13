@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System; //basic utility classes and primitive types
+using System.Collections.Generic; //lists, collections, etc
+using System.Linq;//data
+using System.Text;//text, coding
+using System.Threading.Tasks;//multi-threaded applications
 
-namespace HelloWorld
+namespace HelloWorld //namespace is similar to package in Java
 {
-  internal class Program
+  internal class Program //class accessible ONLY within the namespace 
   {
-    static void Main(string[] args)
+    static void Main(string[] args) //similar to public static void main(String[] args)
     {
     }
   }
