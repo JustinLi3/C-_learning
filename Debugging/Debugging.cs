@@ -16,13 +16,21 @@ namespace HelloWorld
       foreach (var number in smallest)
         Console.WriteLine(number);
     }
-    public static List<int> GetSmallests(List<int> numbers, int count)
+    public static List<int> GetSmallests(List<int> list, int count)
     {
+      var smallests = new List<int>(); 
 
+      while (smallests.Count < count)
+      {
+        var min = GetSmallest(list);
+        smallests.Add(min); 
+        list.Remove(min);
+      }
+      return smallests;
     }
-    public static int GetSmallests(List<int> numbers)
+    public static int GetSmallest(List<int> numbers)
     {
-
+      return numbers.Min();  
     }
   }
 }
