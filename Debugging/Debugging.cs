@@ -17,14 +17,22 @@ namespace HelloWorld
         Console.WriteLine(number);
     }
     public static List<int> GetSmallests(List<int> list, int count)
-    {
-      var smallests = new List<int>(); 
-
+    {  
+      if(list == null)
+      {
+        throw new ArgumentNullException("list"); 
+      }
+      if (count> list.Count || count<=0)
+      {
+        throw new ArgumentOutOfRangeException("Count must be between 1 and the size of the list"); // way to throw errors, more understandable for client 
+      }
+      var smallests = new List<int>();
+      var buffer = new List<int>(list); 
       while (smallests.Count < count)
       {
-        var min = GetSmallest(list);
+        var min = GetSmallest(buffer);
         smallests.Add(min); 
-        list.Remove(min);
+        buffer.Remove(min);
       }
       return smallests;
     }
