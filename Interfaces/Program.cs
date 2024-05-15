@@ -57,7 +57,8 @@ namespace Interfaces
 
       Fish fish = new Fish();
       fish.Flee(); // This should print "The Fish Swims Away"
-      fish.Hunt(); // This should print "The Fish is Hunting"
+      fish.Hunt(); // This should print "The Fish is Hunting" 
+      Console.ReadKey();
     }
   }
 }
